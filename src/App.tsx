@@ -1,11 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { GetStarted, SplashScreen } from './pages'
+import { StyleSheet, Text, View } from 'react-native'
 
 export default function App() {
   return (
-    <View>
-      <Text style={{ color: 'white' }}>Welcome APP Js</Text>
-    </View>
+    <GetStarted/>
   )
 }
 
