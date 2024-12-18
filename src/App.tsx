@@ -1,11 +1,17 @@
 import React from 'react'
 import { GetStarted, SplashScreen } from './pages'
 import { StyleSheet, Text, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+import Router from './Router';
 
-export default function App() {
+const App = () => {
   return (
-    <GetStarted/>
+    <NavigationContainer>
+      <Router/>
+    </NavigationContainer>
   )
 }
+
+export default App
 
 const styles = StyleSheet.create({})

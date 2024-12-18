@@ -1,8 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ILLogo } from '../assets/illustration'
 
-const SplashScreen = () => {
+const SplashScreen = ({ navigation }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('GetStarted')
+    }, 3000);
+  }, [])
   return (
     <View style={styles.page}>
       <ILLogo />
