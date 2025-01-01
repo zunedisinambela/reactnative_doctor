@@ -3,10 +3,10 @@ import React from 'react'
 import { Button, Gap, Header, Input } from '../components'
 import { colors } from '../utils'
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ navigation }) => {
   return (
     <View style={styles.page}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} title="Daftar Akun" />
       <View style={styles.content}>
         <Input label="Full Name" />
         <Gap height={24} />
