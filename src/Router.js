@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { GetStarted, LoginScreen, RegisterScreen, SplashScreen } from './pages';
+import { GetStarted, LoginScreen, RegisterScreen, SplashScreen, UploadPhotoScreen } from './pages';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +12,7 @@ const Router = () => {
       <Stack.Screen name="GetStarted" component={GetStarted} options={{ headerShown: false }} />
       <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false }} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="UploadPhotoScreen" component={UploadPhotoScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
