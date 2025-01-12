@@ -3,23 +3,24 @@ import { StyleSheet } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { GetStarted, LoginScreen, RegisterScreen, SplashScreen, UploadPhotoScreen, DoctorScreen, MessagesScreen, HospitalsScreen } from './pages';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BottomNavigator } from './components';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainAppScreen = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="DoctorScreen" component={DoctorScreen} />
-      <Tab.Screen name="MessagesScreen" component={MessagesScreen} />
-      <Tab.Screen name="HospitalScreen" component={HospitalsScreen} />
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
+      <Tab.Screen name="Doctor" component={DoctorScreen} />
+      <Tab.Screen name="Messages" component={MessagesScreen} />
+      <Tab.Screen name="Hospitals" component={HospitalsScreen} />
     </Tab.Navigator>
   )
 }
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="SplashScreen">
+    <Stack.Navigator initialRouteName="MainAppScreen">
       <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
       <Stack.Screen name="GetStarted" component={GetStarted} options={{ headerShown: false }} />
       <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false }} />
