@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
-import { DummyHospital1 } from '../../assets'
 import { colors, fonts } from '../../utils'
 
 const ListHospital = ({type, name, address, pic}) => {
